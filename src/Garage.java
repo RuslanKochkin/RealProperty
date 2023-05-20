@@ -1,8 +1,8 @@
 public class Garage extends RealProperty {
     private  int PSpaces;
 
-    public Garage(Person owner, String cadastralNumber, String address, double price, double area, int PSpaces) {
-        super(owner, cadastralNumber, address, price, area);
+    public Garage(Person owner, String cadastralNumber, double price, double area,String address, int PSpaces) {
+        super(owner, cadastralNumber, price, area, address);
         this.PSpaces = PSpaces;
     }
 
@@ -15,9 +15,9 @@ public class Garage extends RealProperty {
     public String toString() {
         return "Garage owner " + getOwner() +
                 ":" + getCadastralNumber() +
-                " address " + getAddress() +
                 " price " + getPrice() +
                 " area " + getArea() + ".  машиномест  " + PSpaces +
+                " address " + getAddress() +
                 ".\n";
     }
 }

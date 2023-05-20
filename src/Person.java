@@ -1,8 +1,8 @@
 
 
 public class Person {
-        private String fName;
-        private String lName;
+        private final String fName;
+        private final String lName;
 
         public Person(String fName, String lName) {
                 this.fName = fName;

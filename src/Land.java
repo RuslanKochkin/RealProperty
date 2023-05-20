@@ -1,8 +1,8 @@
 public class Land extends RealProperty{
     private LandPurpose purpose;
 
-    public Land(Person owner, String cadastralNumber, String address, double price, double area, LandPurpose purpose) {
-        super(owner, cadastralNumber, address, price, area);
+    public Land(Person owner, String cadastralNumber, double price, double area,String address,LandPurpose purpose) {
+        super(owner, cadastralNumber, price, area, address);
         this.purpose = purpose;
     }
     @Override
@@ -15,9 +15,9 @@ public class Land extends RealProperty{
     public String toString() {
         return "Land owner " + getOwner() +
                 ":" + getCadastralNumber() +
-                " address " + getAddress() +
                 " price " + getPrice() +
                 " area " + getArea() + "  " + purpose +
+                " address " + getAddress() +
                 ".\n";
     }
 }

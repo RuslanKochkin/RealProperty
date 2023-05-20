@@ -1,8 +1,8 @@
 public class Forest extends RealProperty{
-    private boolean isProtectedZone;
+    private final boolean isProtectedZone;
 
-    public Forest(Person owner, String cadastralNumber, String address, double price, double area, boolean isProtectedZone) {
-        super(owner, cadastralNumber, address, price, area);
+    public Forest(Person owner, String cadastralNumber, double price, double area, String address, boolean isProtectedZone) {
+        super(owner, cadastralNumber, price, area, address);
         this.isProtectedZone = isProtectedZone;
     }
     @Override
@@ -16,9 +16,9 @@ public class Forest extends RealProperty{
     public String toString() {
         return "Forest owner " + getOwner() +
                 ":" + getCadastralNumber() +
-                " address " + getAddress() +
                 " price " + getPrice() +
                 " area " + getArea() + ". ProtectedZone " + isProtectedZone +
+                " address " + getAddress() +
                 ".\n";
     }
 }

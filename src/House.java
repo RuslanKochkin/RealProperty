@@ -5,8 +5,8 @@ public class House extends RealProperty{
     private  List<Person> personListHom = new ArrayList<>();
     private  int floors;
 
-    public House(Person owner, String cadastralNumber, String address, double price, double area, List<Person> personList, int floors) {
-        super(owner, cadastralNumber, address, price, area);
+    public House(Person owner, String cadastralNumber, double price, double area, String address, List<Person> personList, int floors) {
+        super(owner, cadastralNumber, price, area, address);
         this.personListHom = personList;
         this.floors = floors;
     }
@@ -27,9 +27,10 @@ public class House extends RealProperty{
     public String toString() {
         return "Home owner " + getOwner() +
                 ":" + getCadastralNumber() +
-                " address " + getAddress() +
                 " price " + getPrice() +
                 " area " + getArea() + " floors " + floors + " Person " + personListHom +
+                " address " + getAddress() +
                 ".\n";
     }
+
 }

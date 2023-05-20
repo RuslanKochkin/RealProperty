@@ -1,15 +1,15 @@
 public abstract class RealProperty{
     private final Person owner;
     private final String cadastralNumber;
-    private final String address;
     private final double price;
     private final double area;
-    public RealProperty(Person owner, String cadastralNumber, String address, double price, double area) {
+    String address;
+    public RealProperty(Person owner, String cadastralNumber, double price, double area, String address) {
         this.owner = owner;
         this.cadastralNumber = cadastralNumber;
-        this.address = address;
         this.price = price;
         this.area = area;
+        this.address = address;
     }
 
     public abstract double property();
@@ -34,17 +34,13 @@ public abstract class RealProperty{
         return address;
     }
 
-    public double getPropertyTax() {
-        return getPropertyTax();
-    }
-
     @Override
     public String toString() {
         return "owner " + owner +
                 ":" + cadastralNumber +
-                " address " + address +
                 " price " + price +
                 " area " + area +
+                "address " + address +
                 "\n";
     }
 }
