@@ -1,6 +1,6 @@
 public abstract class RealProperty{
     private final Person owner;
-    private final String cadastralNumber;
+    private  String cadastralNumber;
     private final double price;
     private final double area;
     String address;
